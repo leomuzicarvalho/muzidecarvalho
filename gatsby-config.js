@@ -2,10 +2,12 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `Creative Portfolio`,
+    title: `Leonardo Front End Web Developer`,
+    siteUrl: `https://muzidecarvalho-1244253271.gtsb.io/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
     {
