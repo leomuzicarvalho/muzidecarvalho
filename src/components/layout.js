@@ -6,7 +6,7 @@ import { HelmetDatoCms } from "gatsby-source-datocms";
 
 import "../styles/index.sass";
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ location, children }) => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <StaticQuery
@@ -101,7 +101,7 @@ const TemplateWrapper = ({ children }) => {
                 </div>
               </div>
             </div>
-            {children}
+                {children}
           </div>
         </div>
       )}
