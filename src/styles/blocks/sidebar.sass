@@ -7,9 +7,10 @@
     font-weight: bold
     text-decoration: none
     color: $dark-body-color
+    transition: 0.3s all
 
     &:hover
-      border-bottom: dotted 1px #9055a2
+      color: #e9cbff
 
 .sidebar__intro
   color: $light-body-color
@@ -32,6 +33,7 @@
       padding-left: 20px
       color: $base-body-color
       position: relative
+      transition: 0.3s all
 
       &:before
         content: ""
@@ -48,7 +50,7 @@
         opacity: 0.6
 
       &:hover
-        color: $active-color
+        color: $link-hover-color
 
     &.is-active a
       font-weight: bold

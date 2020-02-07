@@ -2,6 +2,7 @@
   display: inline-block
   width: 35px
   height: 35px
+  padding: 10px
   vertical-align: middle
   border: 1px solid $border-color
   border-radius: 50%
@@ -9,6 +10,10 @@
   background-size: 40%
   background-repeat: no-repeat
   margin-bottom: 10px
+  transition: 0.3s all
+
+  &:hover
+    background-color: white
 
 .social--facebook
   background-image: url('https://cdn.rawgit.com/encharm/Font-Awesome-SVG-PNG/master/black/svg/facebook-f.svg')
@@ -21,6 +26,12 @@
 
 .social--email
   background-image: url('https://cdn.rawgit.com/encharm/Font-Awesome-SVG-PNG/master/black/svg/envelope.svg')
+
+.social--github
+  background-image: url('https://image.flaticon.com/icons/svg/25/25231.svg')
+
+.social--linkedin
+  background-image: url('https://image.flaticon.com/icons/svg/733/733617.svg')
 
 @media screen and (min-width: 900px)
   .social
