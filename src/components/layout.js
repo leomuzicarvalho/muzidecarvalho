@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import { StaticQuery, graphql } from "gatsby";
+import Img from 'gatsby-image'
 import { HelmetDatoCms } from "gatsby-source-datocms";
 
 import "../styles/index.sass";
@@ -12,6 +13,13 @@ const TemplateWrapper = ({ location, children }) => {
     <StaticQuery
       query={graphql`
         query LayoutQuery {
+          datoCmsHome{
+            photo{
+              fluid(maxWidth: 300, imgixParams: { fm: "jpg", auto: "compress" }) {
+                ...GatsbyDatoCmsSizes
+              }
+            }
+          }
           datoCmsSite {
             globalSeo {
               siteName
@@ -52,6 +60,9 @@ const TemplateWrapper = ({ location, children }) => {
               <h6 className="sidebar__title">
                 <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
               </h6>
+              <div className="sidebar__photo" style={{width: '50%', margin: '0 auto', marginBottom: '20px'}}>
+                <Img fluid={data.datoCmsHome.photo.fluid} style={{maxWidth: '200px'}} />
+              </div>
               <div
                 className="sidebar__intro"
                 dangerouslySetInnerHTML={{
