@@ -19,6 +19,11 @@ const IndexPage = ({ data }) => (
               </h6>
               <div className="card__description">
                 <p>{work.excerpt}</p>
+                <div
+                dangerouslySetInnerHTML={{
+                  __html: work.link,
+                }}
+                />
               </div>
             </figcaption>
           </figure>
@@ -39,6 +44,7 @@ export const query = graphql`
           title
           slug
           excerpt
+          link
           coverImage {
             fluid(maxWidth: 450, imgixParams: { fm: "jpg", auto: "compress" }) {
               ...GatsbyDatoCmsSizes
