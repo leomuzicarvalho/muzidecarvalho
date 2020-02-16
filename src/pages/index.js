@@ -11,7 +11,10 @@ const IndexPage = ({ data }) => (
         <div key={work.id} className="showcase__item">
           <figure className="card">
             <Link to={`/works/${work.slug}`} className="card__image">
-              <Img fluid={work.coverImage.fluid} />
+              <Img
+              className="images"
+              fluid={work.coverImage.fluid}
+              />
             </Link>
             <figcaption className="card__caption">
               <h6 className="card__title">
@@ -20,6 +23,7 @@ const IndexPage = ({ data }) => (
               <div className="card__description">
                 <p>{work.excerpt}</p>
                 <div
+                className="card__button"
                 dangerouslySetInnerHTML={{
                   __html: work.link,
                 }}
@@ -30,6 +34,7 @@ const IndexPage = ({ data }) => (
         </div>
       ))}
     </Masonry>
+
   </Layout>
 )
 

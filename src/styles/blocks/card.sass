@@ -1,12 +1,33 @@
+$img_size: 270px
+
 .card
   box-shadow: 0 0 5px #ccc
-  
+
 .card__image
   display: block
   position: relative
 
+.card__button
+  width: 50%
+  margin: 15px auto
+  position: relative
+  padding: 10px
+  border: 1px solid black
+  border-radius: 20px
+  background: black
+
+  a
+    color: #d0aaff
+
   img
     display: block
+
+.images
+  height: $img_size
+
+  &:before
+    animation: 2s fade-in
+    animation-name: blink
 
   &:before, &:after
     position: absolute
@@ -63,8 +84,20 @@
   color: black
   font-size: 14px
   line-height: 1.4
+  text-align: center
+
+  a
+    display: flex
+    justify-content: center
 
 .private-project
-  color: red
+  color: #ff9696
   text-align: center
   margin-top: 5px
+
+@keyframes blink
+  0%
+    opacity: 1
+
+  100%
+    opacity: 0

@@ -8,6 +8,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve("./src/layouts/layout"),
+      }
+    },
      `gatsby-plugin-sharp`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-sass`,
